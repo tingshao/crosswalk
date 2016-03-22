@@ -6,7 +6,7 @@
 
 # This script is wrapper for Crosswalk that adds some support for how GYP
 # is invoked by Chromium beyond what can be done in the gclient hooks.
-
+#
 import argparse
 import glob
 import os
