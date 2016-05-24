@@ -394,11 +394,11 @@ if __name__ == '__main__':
 
     # Disable buildin extension by default.
     args.append('-Ddisable_builtin_extensions=1')
-    # Disable Devtools by default if not enabled in GYP_DEFINES
-    if gyp_vars_dict.get('enable_devtools') == '1':
-        args.append('-Ddisable_devtools=0')
-    else:
+    # enable devtools by default
+    if gyp_vars_dict.get('enable_devtools') == '0':
         args.append('-Ddisable_devtools=1')
+    else:
+        args.append('-Ddisable_devtools=0')
 
     # Webvideo is disabled by default if not enabled in GYP_DEFINES.
     if gyp_vars_dict.get('enable_av') == '1':
